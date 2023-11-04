@@ -5,7 +5,7 @@
     position: relative; /* ensure it's in the normal document flow */
     bottom: auto; /* remove any bottom positioning */
     width: 100%; /* full width */
-    background-color: #000; /* Black background */
+    background-color: white; /* Black background */
     color: #fff; /* White text color */
     text-align: center;
     padding: 10px 0;
