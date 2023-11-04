@@ -314,37 +314,47 @@ button {
     padding-top: 20px; /* Padding at the top for spacing */
 }
 
-.sudoku-action-container {
+.sudoku-options-container {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    gap: 20px; /* This adds space between the sudoku board and the action elements */
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Set the sudoku board to take up 3/4 of the container width */
 .sudoku-board {
-    flex: 0 0 75%;
-    max-width: 75%;
+    flex: 0 0 60%;
+    margin-right: 2%;
 }
 
-/* Set the action fieldset to take up 1/4 of the container width */
-.buttons-column {
-    flex: 0 0 25%;
-    max-width: 25%;
-    margin-left: 20px; /* Add some space between the sudoku board and the action fieldset */
+.option {
+    flex: 0 0 38%; /* Adjusted for the gap */
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
 }
 
-/* Additional responsive adjustments for smaller screens */
+.action-container {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
 @media (max-width: 768px) {
-    .sudoku-action-container {
+    .sudoku-options-container {
         flex-direction: column;
         align-items: center;
     }
 
     .sudoku-board,
-    .buttons-column {
+    .option {
         flex: 0 0 auto;
-        max-width: 100%;
-        margin-left: 0; /* Remove the margin for smaller screens */
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .action-container {
+        flex-direction: column;
     }
 }
