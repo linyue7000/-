@@ -266,3 +266,15 @@ html, body {
     cursor: pointer; /* Change cursor to pointer on hover */
     border-radius: 5px; /* Optional: Add rounded corners */
 }
+
+/* Header content styling for flexbox layout */
+.header-content {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the start (left) */
+}
+
+/* Additional styles for introduction text to ensure proper spacing */
+.header-introduction {
+    margin-left: 20px; /* Add some space between the button and the introduction text */
+}
