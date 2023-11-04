@@ -1,342 +1,103 @@
-
-
-/* Standard footer at the end of content */
-.page-footer {
-    position: relative; /* ensure it's in the normal document flow */
-    bottom: auto; /* remove any bottom positioning */
-    width: 100%; /* full width */
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Remove the flex styles from body to allow natural flow */
-body {
-    display: block;
-}
-.page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #e7e7e7;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin: 0; /* Logo at the left */
-}
-
-.print-button-container {
-    text-align: right;
-    margin: 0; /* Button at the right */
-}
-.option{
-    text-align: center;
-    width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.sudoku-board{
-    border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    border-spacing:0;
-    border-collapse:collapse;
-}
-
-.sudoku-block{
-    border: 2px solid black;
-    width: 100%;
-    border-spacing:0;
-    border-collapse:collapse;
-}
-
-.sudoku-cell{
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
-}
-
-.sudoku-board input{
-    width: 100%;
-    height: 100%;
-    font-size: 28px;
-    text-align: center;
-    border: none;
-    color: #006;
-}
-
-.sudoku-board input.given{
-    font-weight: bold;
-    font-size: 30px;;
-    color: #000;
-}
-
-.sudoku-board input::-webkit-outer-spin-button,
-.sudoku-board input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-@media print {
-    body * {
-        visibility: hidden;
-    }
-    .sudoku-board, .sudoku-board * {
-        visibility: visible;
-    }
-    .sudoku-board {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-    .option {
-        display: none;
-    }
-}
-
-.print-button {
-    float: right; /* Move the button to the right side */
-    padding: 10px 20px; /* Increase the size of the button */
-    background-color: red; /* Change the background color to red */
-    color: white; /* Change text color to white for better contrast */
-    font-size: 1.2em; /* Increase font size */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    margin: 10px; /* Add some margin around the button */
-    cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-/* Clear float to prevent layout issues */
-body:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Apply a flex container to the body to align items in a column and center them */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Remove the float from the print button and apply flex properties */
-.print-button {
-    float: none; /* Remove the float property */
-    order: -1; /* Place the print button above the sudoku board */
-    align-self: flex-end; /* Align the button to the right */
-}
-
-/* Ensure the .option class and .sudoku-board are centered */
-.option, .sudoku-board {
-    width: 100%; /* Set the width to 100% to center align the content */
-    max-width: 560px; /* Maximum width of the sudoku board and options */
-    margin: 0 auto; /* Auto margins for horizontal centering */
-}
-
-
-/* Standard footer at the end of content */
-.page-footer {
-    position: relative; /* ensure it's in the normal document flow */
-    bottom: auto; /* remove any bottom positioning */
-    width: 100%; /* full width */
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Remove the flex styles from body to allow natural flow */
-body {
-    display: block;
-}
-.page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #e7e7e7;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-
-.print-button-container {
-    text-align: right;
-}
-
-.introduction {
-    margin: 20px;
-    font-size: 16px;
-    color: #555;
-}
-
-@media (max-width: 768px) {
-    .option {
-        width: auto;
-    }
-
-    .sudoku-board {
-        margin: 0;
-        width: auto;
-    }
-
-    .sudoku-cell {
-        width: 40px;
-        height: 40px;
-    }
-
-    .sudoku-board input {
-        font-size: 22px;
-    }
-}
-
-.bottom-container {
-    background-color: #d9ead3; /* Light green background */
-    padding: 15px;
-    margin-top: 20px; /* Add some space before the container */
-    border-top: 1px solid #e7e7e7; /* A subtle border at the top */
-}
-
-.page-footer {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Header styles */
-.page-header {
-    display: flex; /* Use flexbox for layout */
-    justify-content: flex-start; /* Align items to the start (left) */
-    background-color: #fff; /* Set background color to white */
-    border-bottom: 1px solid #000; /* Add bottom border */
-    padding: 10px; /* Add some padding */
-}
-
-/* Footer styles */
-.page-footer {
-    background-color: #fff; /* Set background color to white */
-    color: #000; /* Set text color to black */
-    text-align: center; /* Center the text */
-    padding: 10px 0; /* Add some padding top and bottom */
-}
-
-/* Update print button margin for better positioning */
-.print-button-container .print-button {
-    margin-right: auto; /* Push the button to the left */
-}
-
-/* Ensure html and body are at least the height of the viewport */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-/* Footer fixed at the bottom */
-.page-footer {
-    position: fixed; /* Fixed position */
-    bottom: 0; /* Align to bottom */
-    left: 0; /* Align to left */
-    width: 100%; /* Full width */
-}
-
-/* Print button styling */
-.print-button {
-    background-color: blue; /* Set the background color to blue */
-    color: white; /* Set the text color to white */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Add some padding */
-    text-transform: uppercase; /* Optional: Transform text to uppercase */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    border-radius: 5px; /* Optional: Add rounded corners */
-}
-
-/* Header content styling for flexbox layout */
-.header-content {
-    display: flex; /* Use flexbox layout */
-    align-items: center; /* Center items vertically */
-    justify-content: flex-start; /* Align items to the start (left) */
-}
-
-/* Additional styles for introduction text to ensure proper spacing */
-.header-introduction {
-    margin-left: 20px; /* Add some space between the button and the introduction text */
-}
-
-/* Reduce header padding for a lower height */
-.page-header {
-    padding: 5px; /* Reduced padding */
-}
-
-/* Increase size of buttons */
-button {
-    padding: 15px 30px; /* Increase padding */
-    font-size: 1.2em; /* Increase font size */
-}
-
-/* Container for the game and action fieldsets */
-.game-action-container {
-    display: flex; /* Use flexbox to lay out children side by side */
-    justify-content: space-between; /* Space out the fieldsets */
-    margin-bottom: 20px; /* Margin at the bottom for spacing before the introduction text */
-}
-
-/* Styles for the fieldsets to ensure they take equal width */
-.game-option, .action-option {
-    flex-basis: 48%; /* Assign a base width for both fieldsets */
-    margin-right: 10px; /* Margin to space out the fieldsets */
-}
-
-/* Ensure the last fieldset doesn't have a margin on the right */
-.game-action-container > fieldset:last-child {
-    margin-right: 0;
-}
-
-/* Style the introduction text container for clear separation from the fieldsets */
-.introduction.bottom-container {
-    clear: both; /* Clear both sides */
-    padding-top: 20px; /* Padding at the top for spacing */
-}
-
-/* Container for the game and action fieldsets with flex layout */
-.options-container {
-    display: flex; /* Use flexbox to lay out children side by side */
-    justify-content: space-between; /* Space out the fieldsets */
-    margin-bottom: 20px; /* Margin at the bottom for spacing before the introduction text */
-    flex-wrap: wrap; /* Allow items to wrap if not enough space */
-}
-
-/* Styles for the fieldsets to ensure they take equal width but also can shrink/grow with flex */
-.game-option, .action-option {
-    flex: 1; /* Allow fieldsets to grow and shrink as needed */
-    min-width: 45%; /* Minimum width before wrapping */
-    margin-right: 10px; /* Margin to space out the fieldsets */
-}
-
-/* Ensure the last fieldset doesn't have a margin on the right */
-.options-container > fieldset:last-child {
-    margin-right: 0;
-}
-
-/* Style the introduction text container for clear separation from the fieldsets */
-.introduction-text {
-    clear: both; /* Clear both sides */
-    padding-top: 20px; /* Padding at the top for spacing */
-    text-align: center; /* Center the introduction text */
-}
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   SudokuJS Usage Example
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="page-header">
+<div class="header-content">
+    <div class="print-button-container">
+        <button class="print-button" onclick="printSudoku()">sudoku à imprimer</button>
+    </div>
+    <div class="header-introduction">打印数独我最棒</div>
+</div>
+</header>
+  <table class="sudoku-board">
+   <script>
+    for(var i = 0; i < 3; i++){ 
+                    document.write('<tr>'); 
+                    
+                    for(var j = 0; j < 3; j++){
+                        document.write('<td><table class="sudoku-block">');
+                        
+                        for(var k = 0; k < 3; k++){
+                            document.write('<tr>');
+                        
+                            for(var l = 0; l < 3; l++){
+                                var id = (i * 27) + (k * 9) + (j * 3) + l;
+                                document.write('<td class="sudoku-cell"><input id="cell' + id + '" type="number" max="9" min="1" /></td>');
+                            }
+                            
+                            document.write('</tr>');
+                        }
+                        
+                        document.write('</table></td>');
+                    }
+                    
+                    document.write('</tr>');
+                }
+   </script>
+  </table>
+  <div class="option">
+   <p>
+    <fieldset>
+     <legend>
+      Start new game (select difficulty)
+     </legend>
+     <button id="blank" type="button">
+      Blank
+     </button>
+     <button id="easiest" type="button">
+      Easiest
+     </button>
+     <button id="easy" type="button">
+      Easy
+     </button>
+     <button id="normal" type="button">
+      Normal
+     </button>
+     <button id="hard" type="button">
+      Hard
+     </button>
+     <button id="hardest" type="button">
+      Hardest
+     </button>
+    </fieldset>
+   </p>
+   <p>
+    <fieldset>
+     <legend>
+      Action
+     </legend>
+     <button id="clear" type="button">
+      Clear
+     </button>
+     <button id="submit" type="button">
+      Submit Answer
+     </button>
+     <button id="solve" type="button">
+      Solve
+     </button>
+     <div class="introduction bottom-container">
+      Bienvenue sur notre page de sudoku! Ici vous pouvez imprimer des grilles de sudoku pour jouer.
+     </div>
+    </fieldset>
+   </p>
+  </div>
+  <script>
+   function printSudoku() {
+                window.print();
+            }
+  </script>
+ <footer class="page-footer">Copyright 2023 © sudoku à imprimer. All rights reserved.</footer>
+
+</html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script src="sudoku.min.js">
+</script>
+<script src="main.js">
+</script>
