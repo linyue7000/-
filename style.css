@@ -314,41 +314,39 @@ button {
     padding-top: 20px; /* Padding at the top for spacing */
 }
 
-/* Reduce the size of the sudoku cells for smaller screens */
-.sudoku-board .sudoku-cell {
-    width: 40px; /* Smaller cells */
-    height: 40px; /* Smaller cells */
+.sudoku-action-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.sudoku-board input {
-    font-size: 22px; /* Smaller font size for numbers */
+.buttons-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Add some space between the sudoku board and the action fieldset */
 }
 
-/* Adjust the options-container for smaller screens */
+/* Adjust the flex-basis for both the sudoku board and the action fieldset */
+.sudoku-board,
+.buttons-column {
+    flex-basis: auto;
+}
+
+/* Ensure the buttons in the action fieldset are stacked vertically and full width */
+.buttons-column button {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Additional responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .options-container {
+    .sudoku-action-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .options-container .option, .options-container fieldset {
-        width: 90%; /* Full width on smaller screens */
-        margin-bottom: 10px;
-    }
-
-    .introduction.bottom-container {
-        font-size: 1em; /* Smaller font size on smaller screens */
-    }
-}
-
-/* Additional adjustments for even smaller screens */
-@media (max-width: 480px) {
-    .sudoku-board .sudoku-cell {
-        width: 30px; /* Even smaller cells */
-        height: 30px; /* Even smaller cells */
-    }
-
-    .sudoku-board input {
-        font-size: 18px; /* Even smaller font size for numbers */
+    .sudoku-board,
+    .buttons-column {
+        width: 100%;
     }
 }
