@@ -255,3 +255,14 @@ html, body {
     left: 0; /* Align to left */
     width: 100%; /* Full width */
 }
+
+/* Print button styling */
+.print-button {
+    background-color: blue; /* Set the background color to blue */
+    color: white; /* Set the text color to white */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add some padding */
+    text-transform: uppercase; /* Optional: Transform text to uppercase */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
