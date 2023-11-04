@@ -2,34 +2,32 @@
 
 /* Standard footer at the end of content */
 .page-footer {
-    position: relative; /* ensure it's in the normal document flow */
-    bottom: auto; /* remove any bottom positioning */
-    width: 100%; /* full width */
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
+    background-color: #000080;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
 }
+
+
 
 /* Remove the flex styles from body to allow natural flow */
 body {
     display: block;
 }
 .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #e7e7e7;
+    text-align: center;
+    border-bottom: 2px solid black;
 }
 
+
+
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin: 0; /* Logo at the left */
+    font-size: 2em;
+    color: #000;
+    margin: 0 auto;
 }
+
+
 
 .print-button-container {
     text-align: right;
@@ -42,27 +40,24 @@ body {
     margin-right: auto;
 }
 
-.sudoku-board{
-    border: 2px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    border-spacing:0;
-    border-collapse:collapse;
+.sudoku-board {
+    border: 3px solid black;
+    margin: 20px auto;
 }
 
-.sudoku-block{
-    border: 2px solid black;
-    width: 100%;
-    border-spacing:0;
-    border-collapse:collapse;
-}
 
-.sudoku-cell{
+
+.sudoku-block {
     border: 1px solid black;
-    width: 50px;
-    height: 50px;
 }
+
+
+
+.sudoku-cell {
+    border: 1px solid #ddd;
+}
+
+
 
 .sudoku-board input{
     width: 100%;
@@ -93,26 +88,25 @@ body {
         visibility: visible;
     }
     .sudoku-board {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+    border: 3px solid black;
+    margin: 20px auto;
+}
+
+
     .option {
         display: none;
     }
 }
 
 .print-button {
-    float: right; /* Move the button to the right side */
-    padding: 10px 20px; /* Increase the size of the button */
-    background-color: red; /* Change the background color to red */
-    color: white; /* Change text color to white for better contrast */
-    font-size: 1.2em; /* Increase font size */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    margin: 10px; /* Add some margin around the button */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #90ee90;
+    font-size: 1.2em;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
 }
+
+
 
 /* Clear float to prevent layout issues */
 body:after {
@@ -130,48 +124,52 @@ body {
 
 /* Remove the float from the print button and apply flex properties */
 .print-button {
-    float: none; /* Remove the float property */
-    order: -1; /* Place the print button above the sudoku board */
-    align-self: flex-end; /* Align the button to the right */
+    background-color: #90ee90;
+    font-size: 1.2em;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
 }
+
+
 
 /* Ensure the .option class and .sudoku-board are centered */
 .option, .sudoku-board {
-    width: 100%; /* Set the width to 100% to center align the content */
-    max-width: 560px; /* Maximum width of the sudoku board and options */
-    margin: 0 auto; /* Auto margins for horizontal centering */
+    border: 3px solid black;
+    margin: 20px auto;
 }
+
+
 
 
 /* Standard footer at the end of content */
 .page-footer {
-    position: relative; /* ensure it's in the normal document flow */
-    bottom: auto; /* remove any bottom positioning */
-    width: 100%; /* full width */
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
+    background-color: #000080;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
 }
+
+
 
 /* Remove the flex styles from body to allow natural flow */
 body {
     display: block;
 }
 .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #e7e7e7;
+    text-align: center;
+    border-bottom: 2px solid black;
 }
 
+
+
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    font-size: 2em;
+    color: #000;
+    margin: 0 auto;
 }
+
+
 
 .print-button-container {
     text-align: right;
@@ -189,14 +187,17 @@ body {
     }
 
     .sudoku-board {
-        margin: 0;
-        width: auto;
-    }
+    border: 3px solid black;
+    margin: 20px auto;
+}
+
+
 
     .sudoku-cell {
-        width: 40px;
-        height: 40px;
-    }
+    border: 1px solid #ddd;
+}
+
+
 
     .sudoku-board input {
         font-size: 22px;
@@ -211,28 +212,10 @@ body {
 }
 
 .page-footer {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text color */
+    background-color: #000080;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Change the page header background color to a light grey */
-.page-header {
-    background-color: #f2f2f2; /* Light grey background */
-}
 
-/* Style for the print button on hover to change background color to light orange and scale up */
-.print-button:hover {
-    background-color: #ffcc80; /* Light orange background */
-    transform: scale(1.1); /* Scale up the button to 110% of its size */
-}
-
-/* Change the print button background color to blue and text color to white */
-.print-button {
-    background-color: #007bff; /* Blue background */
-    color: #ffffff; /* White text color */
-}
