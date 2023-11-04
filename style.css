@@ -2,8 +2,12 @@
 
 /* Standard footer at the end of content */
 .page-footer {
-    background-color: #f5f5dc;
+    background-color: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
+
 
 
 /* Remove the flex styles from body to allow natural flow */
@@ -11,14 +15,18 @@ body {
     display: block;
 }
 .page-header {
-    background-color: #fff;
+    text-align: center;
+    border-bottom: 2px solid black;
 }
+
 
 
 .logo {
-    color: #90ee90;
-    margin-left: 20px;
+    font-size: 2em;
+    color: #000;
+    margin: 0 auto;
 }
+
 
 
 .print-button-container {
@@ -33,8 +41,10 @@ body {
 }
 
 .sudoku-board {
-    border: 2px solid black;
+    border: 3px solid black;
+    margin: 20px auto;
 }
+
 
 
 .sudoku-block {
@@ -42,9 +52,11 @@ body {
 }
 
 
+
 .sudoku-cell {
-    border: 1px solid black;
+    border: 1px solid #ddd;
 }
+
 
 
 .sudoku-board input{
@@ -76,8 +88,10 @@ body {
         visibility: visible;
     }
     .sudoku-board {
-    border: 2px solid black;
+    border: 3px solid black;
+    margin: 20px auto;
 }
+
 
     .option {
         display: none;
@@ -86,7 +100,12 @@ body {
 
 .print-button {
     background-color: #90ee90;
+    font-size: 1.2em;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
 }
+
 
 
 /* Clear float to prevent layout issues */
@@ -106,20 +125,31 @@ body {
 /* Remove the float from the print button and apply flex properties */
 .print-button {
     background-color: #90ee90;
+    font-size: 1.2em;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
 }
+
 
 
 /* Ensure the .option class and .sudoku-board are centered */
 .option, .sudoku-board {
-    border: 2px solid black;
+    border: 3px solid black;
+    margin: 20px auto;
 }
+
 
 
 
 /* Standard footer at the end of content */
 .page-footer {
-    background-color: #f5f5dc;
+    background-color: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
+
 
 
 /* Remove the flex styles from body to allow natural flow */
@@ -127,14 +157,18 @@ body {
     display: block;
 }
 .page-header {
-    background-color: #fff;
+    text-align: center;
+    border-bottom: 2px solid black;
 }
+
 
 
 .logo {
-    color: #90ee90;
-    margin-left: 20px;
+    font-size: 2em;
+    color: #000;
+    margin: 0 auto;
 }
+
 
 
 .print-button-container {
@@ -153,13 +187,16 @@ body {
     }
 
     .sudoku-board {
-    border: 2px solid black;
+    border: 3px solid black;
+    margin: 20px auto;
 }
+
 
 
     .sudoku-cell {
-    border: 1px solid black;
+    border: 1px solid #ddd;
 }
+
 
 
     .sudoku-board input {
@@ -175,6 +212,10 @@ body {
 }
 
 .page-footer {
-    background-color: #f5f5dc;
+    background-color: #000080;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
+
 
