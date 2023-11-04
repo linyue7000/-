@@ -1,22 +1,23 @@
 <!DOCTYPE html>
+
 <html>
- <head>
-  <title>
+<head>
+<title>
    SudokuJS Usage Example
   </title>
-  <link href="style.css" rel="stylesheet"/>
- </head>
- <body>
-  <header class="page-header">
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="page-header">
 <div class="header-content">
-    <div class="print-button-container">
-        <button class="print-button" onclick="printSudoku()">sudoku à imprimer</button>
-    </div>
-    <div class="header-introduction">打印数独我最棒</div>
+<div class="print-button-container">
+<button class="print-button" onclick="printSudoku()">sudoku à imprimer</button>
+</div>
+<div class="header-introduction">打印数独我最棒</div>
 </div>
 </header>
-  <table class="sudoku-board">
-   <script>
+<table class="sudoku-board">
+<script>
     for(var i = 0; i < 3; i++){ 
                     document.write('<tr>'); 
                     
@@ -40,61 +41,61 @@
                     document.write('</tr>');
                 }
    </script>
-  </table>
-  <div class="option">
-   <p>
-    <fieldset>
-     <legend>
+</table><div class="options-container"><div class="option">
+<p>
+<fieldset>
+<legend>
       Start new game (select difficulty)
      </legend>
-     <button id="blank" type="button">
+<button id="blank" type="button">
       Blank
      </button>
-     <button id="easiest" type="button">
+<button id="easiest" type="button">
       Easiest
      </button>
-     <button id="easy" type="button">
+<button id="easy" type="button">
       Easy
      </button>
-     <button id="normal" type="button">
+<button id="normal" type="button">
       Normal
      </button>
-     <button id="hard" type="button">
+<button id="hard" type="button">
       Hard
      </button>
-     <button id="hardest" type="button">
+<button id="hardest" type="button">
       Hardest
      </button>
-    </fieldset>
-   </p>
-   <p>
-    <fieldset>
-     <legend>
+</fieldset>
+</p>
+<p>
+
+</p>
+</div><fieldset>
+<legend>
       Action
      </legend>
-     <button id="clear" type="button">
+<button id="clear" type="button">
       Clear
      </button>
-     <button id="submit" type="button">
+<button id="submit" type="button">
       Submit Answer
      </button>
-     <button id="solve" type="button">
+<button id="solve" type="button">
       Solve
      </button>
-     <div class="introduction bottom-container">
+
+</fieldset></div><div class="introduction bottom-container">
       Bienvenue sur notre page de sudoku! Ici vous pouvez imprimer des grilles de sudoku pour jouer.
      </div>
-    </fieldset>
-   </p>
-  </div>
-  <script>
+
+<script>
    function printSudoku() {
                 window.print();
             }
   </script>
- <footer class="page-footer">Copyright 2023 © sudoku à imprimer. All rights reserved.</footer>
+<footer class="page-footer">Copyright 2023 © sudoku à imprimer. All rights reserved.</footer>
 
-</html>
+</body></html>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
 </script>
 <script src="sudoku.min.js">
