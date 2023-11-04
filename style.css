@@ -220,19 +220,24 @@ body {
     width: 100%;
 }
 
-/* Change the page header background color to a light grey */
+/* Header styles */
 .page-header {
-    background-color: #f2f2f2; /* Light grey background */
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the start (left) */
+    background-color: #fff; /* Set background color to white */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    padding: 10px; /* Add some padding */
 }
 
-/* Style for the print button on hover to change background color to light orange and scale up */
-.print-button:hover {
-    background-color: #ffcc80; /* Light orange background */
-    transform: scale(1.1); /* Scale up the button to 110% of its size */
+/* Footer styles */
+.page-footer {
+    background-color: #fff; /* Set background color to white */
+    color: #000; /* Set text color to black */
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Add some padding top and bottom */
 }
 
-/* Change the print button background color to blue and text color to white */
-.print-button {
-    background-color: #007bff; /* Blue background */
-    color: #ffffff; /* White text color */
+/* Update print button margin for better positioning */
+.print-button-container .print-button {
+    margin-right: auto; /* Push the button to the left */
 }
