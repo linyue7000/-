@@ -289,3 +289,27 @@ button {
     padding: 15px 30px; /* Increase padding */
     font-size: 1.2em; /* Increase font size */
 }
+
+/* Container for the game and action fieldsets */
+.game-action-container {
+    display: flex; /* Use flexbox to lay out children side by side */
+    justify-content: space-between; /* Space out the fieldsets */
+    margin-bottom: 20px; /* Margin at the bottom for spacing before the introduction text */
+}
+
+/* Styles for the fieldsets to ensure they take equal width */
+.game-option, .action-option {
+    flex-basis: 48%; /* Assign a base width for both fieldsets */
+    margin-right: 10px; /* Margin to space out the fieldsets */
+}
+
+/* Ensure the last fieldset doesn't have a margin on the right */
+.game-action-container > fieldset:last-child {
+    margin-right: 0;
+}
+
+/* Style the introduction text container for clear separation from the fieldsets */
+.introduction.bottom-container {
+    clear: both; /* Clear both sides */
+    padding-top: 20px; /* Padding at the top for spacing */
+}
