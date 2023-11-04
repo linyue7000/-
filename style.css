@@ -241,3 +241,17 @@ body {
 .print-button-container .print-button {
     margin-right: auto; /* Push the button to the left */
 }
+
+/* Ensure html and body are at least the height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Footer fixed at the bottom */
+.page-footer {
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+}
