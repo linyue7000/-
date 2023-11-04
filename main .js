@@ -101,7 +101,3 @@ function render(){
 		}
 	}
 }
-// Print functionality
-$('#print').click(function() {
-    window.print();
-});
