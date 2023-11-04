@@ -1,4 +1,31 @@
 
+
+.page-header,
+.page-footer {
+    width: 100%;
+    margin: 0;
+}
+
+/* Ensure the footer sticks to the bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Adjust the page footer to ensure it stays at the bottom */
+.page-footer {
+    position: static; /* Changed from absolute to static */
+    bottom: 0;
+}
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -126,6 +153,33 @@ body {
     margin: 0 auto; /* Auto margins for horizontal centering */
 }
 
+
+.page-header,
+.page-footer {
+    width: 100%;
+    margin: 0;
+}
+
+/* Ensure the footer sticks to the bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Adjust the page footer to ensure it stays at the bottom */
+.page-footer {
+    position: static; /* Changed from absolute to static */
+    bottom: 0;
+}
 .page-header {
     display: flex;
     justify-content: space-between;
