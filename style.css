@@ -358,28 +358,3 @@ button {
         flex-direction: column;
     }
 }
-
-.option button {
-    padding: 10px 15px; /* Sufficient padding for touch targets */
-    margin-bottom: 10px; /* Space between buttons */
-    border: 1px solid #ddd; /* Subtle border */
-    background-color: #f8f8f8; /* Light background */
-    border-radius: 4px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
-    font-size: 16px; /* Readable font size */
-    width: calc(100% - 30px); /* Full width taking into account padding and border */
-    box-sizing: border-box; /* Include padding and border in the element's width and height */
-    cursor: pointer; /* Indicate the buttons are clickable */
-    text-align: center; /* Center the text inside the button */
-}
-
-/* Hover effect for buttons */
-.option button:hover {
-    background-color: #eaeaea;
-    border-color: #ccc;
-}
-
-/* Adjust the last button's margin to remove the extra space at the bottom */
-.option button:last-child {
-    margin-bottom: 0;
-}
