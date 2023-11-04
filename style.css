@@ -317,25 +317,21 @@ button {
 .sudoku-action-container {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
+    gap: 20px; /* This adds space between the sudoku board and the action elements */
 }
 
+/* Set the sudoku board to take up 3/4 of the container width */
+.sudoku-board {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+/* Set the action fieldset to take up 1/4 of the container width */
 .buttons-column {
-    display: flex;
-    flex-direction: column;
+    flex: 0 0 25%;
+    max-width: 25%;
     margin-left: 20px; /* Add some space between the sudoku board and the action fieldset */
-}
-
-/* Adjust the flex-basis for both the sudoku board and the action fieldset */
-.sudoku-board,
-.buttons-column {
-    flex-basis: auto;
-}
-
-/* Ensure the buttons in the action fieldset are stacked vertically and full width */
-.buttons-column button {
-    margin-bottom: 10px;
-    width: 100%;
 }
 
 /* Additional responsive adjustments for smaller screens */
@@ -347,6 +343,8 @@ button {
 
     .sudoku-board,
     .buttons-column {
-        width: 100%;
+        flex: 0 0 auto;
+        max-width: 100%;
+        margin-left: 0; /* Remove the margin for smaller screens */
     }
 }
