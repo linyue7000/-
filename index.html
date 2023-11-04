@@ -41,53 +41,32 @@
                 }
    </script>
   </table>
-  <div class="option">
-   <p>
-    <fieldset>
-     <legend>
-      Start new game (select difficulty)
-     </legend>
-     <button id="blank" type="button">
-      Blank
-     </button>
-     <button id="easiest" type="button">
-      Easiest
-     </button>
-     <button id="easy" type="button">
-      Easy
-     </button>
-     <button id="normal" type="button">
-      Normal
-     </button>
-     <button id="hard" type="button">
-      Hard
-     </button>
-     <button id="hardest" type="button">
-      Hardest
-     </button>
+  
+<div class="options-container">
+    <fieldset class="game-option">
+        <legend>
+            Start new game (select difficulty)
+        </legend>
+        <button id="blank" type="button">Blank</button>
+        <button id="easiest" type="button">Easiest</button>
+        <button id="easy" type="button">Easy</button>
+        <button id="normal" type="button">Normal</button>
+        <button id="hard" type="button">Hard</button>
+        <button id="hardest" type="button">Hardest</button>
     </fieldset>
-   </p>
-   <p>
-    <fieldset>
-     <legend>
-      Action
-     </legend>
-     <button id="clear" type="button">
-      Clear
-     </button>
-     <button id="submit" type="button">
-      Submit Answer
-     </button>
-     <button id="solve" type="button">
-      Solve
-     </button>
-     <div class="introduction bottom-container">
-      Bienvenue sur notre page de sudoku! Ici vous pouvez imprimer des grilles de sudoku pour jouer.
-     </div>
+    <fieldset class="action-option">
+        <legend>
+            Action
+        </legend>
+        <button id="clear" type="button">Clear</button>
+        <button id="submit" type="button">Submit Answer</button>
+        <button id="solve" type="button">Solve</button>
     </fieldset>
-   </p>
-  </div>
-  <script>
+</div>
+<div class="introduction-text">
+    Bienvenue sur notre page de sudoku! Ici vous pouvez imprimer des grilles de sudoku pour jouer.
+</div>
+<script>
    function printSudoku() {
                 window.print();
             }
