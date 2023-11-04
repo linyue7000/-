@@ -15,7 +15,11 @@ $(function(){
 	$('#solve').click(solve);
 	$('#submit').click(submit);
 });
-
+// Print functionality
+$('#print').click(function() {
+    window.print();
+});
+});
 function submit(){
 	for(var i = 0; i < 81; i++){
 		sudoku.cells[i] = new Sudoku.Cell(i, $('#cell' + i).val());
