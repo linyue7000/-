@@ -16,7 +16,7 @@
 <div class="header-introduction">打印数独我最棒</div>
 </div>
 </header>
-<div class="sudoku-action-container"><table class="sudoku-board">
+<div class="sudoku-options-container"><table class="sudoku-board">
 <script>
     for(var i = 0; i < 3; i++){ 
                     document.write('<tr>'); 
@@ -41,26 +41,9 @@
                     document.write('</tr>');
                 }
    </script>
-</table><fieldset class="buttons-column">
-<legend>
-      Action
-     </legend>
-<button id="clear" type="button">
-      Clear
-     </button>
-<button id="submit" type="button">
-      Submit Answer
-     </button>
-<button id="solve" type="button">
-      Solve
-     </button>
-<div class="introduction bottom-container">
-      Bienvenue sur notre page de sudoku! Ici vous pouvez imprimer des grilles de sudoku pour jouer.
-     </div>
-</fieldset></div>
-<div class="option">
+</table><div class="option">
 <p>
-<fieldset>
+<div class="action-container"><fieldset>
 <legend>
       Start new game (select difficulty)
      </legend>
@@ -82,12 +65,29 @@
 <button id="hardest" type="button">
       Hardest
      </button>
-</fieldset>
+</fieldset></div>
 </p>
 <p>
-
+<fieldset>
+<legend>
+      Action
+     </legend>
+<button id="clear" type="button">
+      Clear
+     </button>
+<button id="submit" type="button">
+      Submit Answer
+     </button>
+<button id="solve" type="button">
+      Solve
+     </button>
+<div class="introduction bottom-container">
+      Bienvenue sur notre page de sudoku! Ici vous pouvez imprimer des grilles de sudoku pour jouer.
+     </div>
+</fieldset>
 </p>
-</div>
+</div></div>
+
 <script>
    function printSudoku() {
                 window.print();
