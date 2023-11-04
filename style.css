@@ -278,3 +278,14 @@ html, body {
 .header-introduction {
     margin-left: 20px; /* Add some space between the button and the introduction text */
 }
+
+/* Reduce header padding for a lower height */
+.page-header {
+    padding: 5px; /* Reduced padding */
+}
+
+/* Increase size of buttons */
+button {
+    padding: 15px 30px; /* Increase padding */
+    font-size: 1.2em; /* Increase font size */
+}
