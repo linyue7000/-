@@ -316,18 +316,33 @@ button {
 
 .options-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     margin-top: 20px;
+    gap: 20px;
 }
 
 .options-container .option, .options-container fieldset {
     flex: 1;
-    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ensure buttons have a uniform size */
+.options-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
 }
 
 .introduction.bottom-container {
     margin-top: 20px;
     text-align: center;
     font-size: 1.2em;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
