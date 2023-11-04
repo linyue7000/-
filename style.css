@@ -313,3 +313,21 @@ button {
     clear: both; /* Clear both sides */
     padding-top: 20px; /* Padding at the top for spacing */
 }
+
+.options-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.options-container .option, .options-container fieldset {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.introduction.bottom-container {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
