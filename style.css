@@ -1,30 +1,19 @@
 
 
-.page-header,
+/* Standard footer at the end of content */
 .page-footer {
-    width: 100%;
-    margin: 0;
+    position: relative; /* ensure it's in the normal document flow */
+    bottom: auto; /* remove any bottom positioning */
+    width: 100%; /* full width */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 10px 0;
 }
 
-/* Ensure the footer sticks to the bottom */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
+/* Remove the flex styles from body to allow natural flow */
 body {
-    display: flex;
-    flex-direction: column;
-}
-
-.content {
-    flex: 1;
-}
-
-/* Adjust the page footer to ensure it stays at the bottom */
-.page-footer {
-    position: static; /* Changed from absolute to static */
-    bottom: 0;
+    display: block;
 }
 .page-header {
     display: flex;
@@ -154,31 +143,20 @@ body {
 }
 
 
-.page-header,
+/* Standard footer at the end of content */
 .page-footer {
-    width: 100%;
-    margin: 0;
+    position: relative; /* ensure it's in the normal document flow */
+    bottom: auto; /* remove any bottom positioning */
+    width: 100%; /* full width */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 10px 0;
 }
 
-/* Ensure the footer sticks to the bottom */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
+/* Remove the flex styles from body to allow natural flow */
 body {
-    display: flex;
-    flex-direction: column;
-}
-
-.content {
-    flex: 1;
-}
-
-/* Adjust the page footer to ensure it stays at the bottom */
-.page-footer {
-    position: static; /* Changed from absolute to static */
-    bottom: 0;
+    display: block;
 }
 .page-header {
     display: flex;
