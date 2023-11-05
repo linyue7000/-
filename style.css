@@ -1,3 +1,5 @@
+
+
 /* Standard footer at the end of content */
 .page-footer {
     position: relative; /* ensure it's in the normal document flow */
@@ -357,9 +359,29 @@ button {
     }
 }
 
-/* New style for td elements */
-td {
-    background-color: green; /* Setting the background color to green */
-    text-align: center; /* Centering text */
-    color: white; /* Optional: changing text color to white for better contrast */
+/* Site Introduction Container styles */
+.site-introduction-container {
+    background-color: #008000; /* Green background */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto; /* Center the container */
+    width: 80%; /* Width of the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Footer links styles */
+.footer-links {
+    padding-top: 10px; /* Space between copyright and links */
+}
+
+.footer-links a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* No underline */
+    padding: 0 10px; /* Spacing between links */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
