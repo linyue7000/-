@@ -1,12 +1,10 @@
-
-
 /* Standard footer at the end of content */
 .page-footer {
     position: relative; /* ensure it's in the normal document flow */
     bottom: auto; /* remove any bottom positioning */
     width: 100%; /* full width */
     background-color: #000; /* Black background */
-    color: #fff; /* White text coloår */
+    color: #fff; /* White text colo氓r */
     text-align: center;
     padding: 10px 0;
 }
