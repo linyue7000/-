@@ -4,7 +4,7 @@
     bottom: auto; /* remove any bottom positioning */
     width: 100%; /* full width */
     background-color: #000; /* Black background */
-    color: #fff; /* White text colo氓r */
+    color: #fff; /* White text color */
     text-align: center;
     padding: 10px 0;
 }
@@ -359,6 +359,7 @@ button {
 
 /* New style for td elements */
 td {
-    background-color: green; /* Green background */
-    text-align: center; /* Center text */
+    background-color: green; /* Setting the background color to green */
+    text-align: center; /* Centering text */
+    color: white; /* Optional: changing text color to white for better contrast */
 }
