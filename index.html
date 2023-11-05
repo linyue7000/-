@@ -1,25 +1,43 @@
-
 <!DOCTYPE html>
-
 <html>
-<head>
-<title>
-   SudokuJS Usage Example
+ <head>
+  <title>
+  sudoku à imprimer
   </title>
 <link href="style.css" rel="stylesheet"/>
-</head>
-<body>
-<header class="page-header">
-<div class="header-content">
-<div class="print-button-container">
-<button class="print-button" onclick="printSudoku()">sudoku à imprimer</button>
-</div>
-<div class="header-introduction">Cliquez sur le bouton bleu à gauche pour imprimer la planche de Sudoku.</div>
-</div>
-</header>
-<div class="sudoku-options-container"><table class="sudoku-board">
-<script>
-    for(var i = 0; i < 3; i++){ 
+  
+    <style>
+     .main-layout { display: flex; flex-direction: column; }
+     .upper-layout { display: flex; width: 100%; }
+     .container-a { width: 66%; float: left}  /* Adjust width as necessary */
+     .container-b { width: 34%; float: right}  /* Adjust width as necessary */
+     .container-c { width: 100%; clear: both; margin-top: 20px; } /* Added margin for visual separation */
+    </style>
+    
+ </head>
+ <header class="page-header">
+  <div class="header-content">
+   <div class="print-button-container">
+    <body>
+     <button class="print-button" onclick="printSudoku()">
+      sudoku à imprimer
+     </button>
+     
+      
+     </div>
+    </body>
+   </div>
+   <div class="header-introduction">
+    Cliquez sur le bouton bleu à gauche pour imprimer la planche de Sudoku.
+   </div>
+  </div>
+ </header>
+ <div class="main-layout">
+  <div class=\"upper-layout\"><div class="container-a">
+   <div class="sudoku-options-container">
+    <table class="sudoku-board">
+     <script>
+      for(var i = 0; i < 3; i++){ 
                     document.write('<tr>'); 
                     
                     for(var j = 0; j < 3; j++){
@@ -41,72 +59,96 @@
                     
                     document.write('</tr>');
                 }
-   </script>
-</table><div class="option">
-<p>
-<div class="action-container"><fieldset>
-<legend>
+     </script>
+    </table>
+   </div>
+  </div>
+  <div class="container-b">
+   <div class="action-container">
+    <fieldset>
+     <legend>
       Start new game (select difficulty)
      </legend>
-<button id="blank" type="button">
+     <button id="blank" type="button">
       Blank
      </button>
-<button id="easiest" type="button">
+     <button id="easiest" type="button">
       Easiest
      </button>
-<button id="easy" type="button">
+     <button id="easy" type="button">
       Easy
      </button>
-<button id="normal" type="button">
+     <button id="normal" type="button">
       Normal
      </button>
-<button id="hard" type="button">
+     <button id="hard" type="button">
       Hard
      </button>
-<button id="hardest" type="button">
+     <button id="hardest" type="button">
       Hardest
      </button>
-</fieldset></div>
-</p>
-<p>
-<fieldset>
-<legend>
-      Action
-     </legend>
-<button id="clear" type="button">
-      Clear
-     </button>
-<button id="submit" type="button">
-      Submit Answer
-     </button>
-<button id="solve" type="button">
-      Solve
-     </button>
-<div class="introduction bottom-container">
-      Sélectionnez le niveau de difficulté pour commencer le jeu, remplissez tous les chiffres et cliquez sur le bouton "soumettre la réponse" pour vérifier si elle est correcte. Le bouton "effacer" efface les chiffres du tableau et le bouton "résoudre" vous donne la réponse !
-     </div>
-</fieldset>
-</p>
+    </fieldset>
+    <div class="option">
+        <p>
+        </p>
+        <p>
+         <fieldset>
+          <legend>
+           Action
+          </legend>
+          <button id="clear" type="button">
+           Clear
+          </button>
+          <button id="submit" type="button">
+           Submit Answer
+          </button>
+          <button id="solve" type="button">
+           Solve
+          </button>
+         </fieldset>
+         <script>
+          function printSudoku() {
+                    window.print();
+                }
+         </script>
+   </div></div>
+  </div>
+ </div>
+</html>
+<div>
+    <div class="container-c">
+    <div class="introduction bottom-container">
+        <h1>How to Print Sudoku?</h1>  
+        On our website, you can print blank Sudoku grids as well as Sudoku grids of various difficulties. You can also choose to print pre-solved Sudoku grids. First, you can select the desired difficulty level, then click on the Sudoku print button in the top left corner. Printing options will appear. It's recommended to use Google Chrome. You can select your printer as the target printer or save the Sudoku grid as a PDF. In the "More settings," you can customize margin adjustments and scale sizes to get the Sudoku grid you prefer.
+        
+        <h1>What is Sudoku?</h1>
+        Answer: Sudoku is a logic puzzle game, also known as a number puzzle or a digit puzzle. Players need to fill a 9x9 grid in such a way that every row, every column, and each of the nine 3x3 grids (also known as regions) contains all the digits from 1 to 9, without any repetition.
+        
+        <h1>Why should I choose your website to play Sudoku gratuit (free Sudoku) games?</h1>
+        Answer: You should choose our website because we offer various Sudoku game options, including free online Sudoku, free printable Sudoku, and five different difficulty levels of Sudoku (Ultra-easy Sudoku, Sudoku facile, Sudoku moyen, Difficult Sudoku, Ultra-difficult Sudoku) to cater to the preferences of Sudoku enthusiasts of all levels. Our games are easy to access, require no registration, and are an ideal choice for Sudoku enthusiasts.
+    </div>
+</div class="container-c"></div>
 </div>
-</div>
-
-<script>
-   function printSudoku() {
-                window.print();
-            }
-  </script>
-<footer class="page-footer">Copyright 2023 © sudoku à imprimer. All rights reserved.
-<div class="language-links">
-    <a href="index_en.html">English</a> |
-    <a href="index_de.html">Deutsch</a> |
-    <a href="index_es.html">Español</a> |
-    <a href="index_hi.html">हिन्दी</a>
-</div>
+<footer class="page-footer">
+ Copyright 2023 © sudoku à imprimer. All rights reserved.
+ <div class="language-links">
+  <a href="index_en.html">
+   English
+  </a>
+  |
+  <a href="index_de.html">
+   Deutsch
+  </a>
+  |
+  <a href="index_es.html">
+   Español
+  </a>
+  |
+  <a href="index_hi.html">
+   हिन्दी
+  </a>
+ </div>
 </footer>
-
-
-<div class="bottom-green-block"></div>
-</body></html>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
 </script>
 <script src="sudoku.min.js">
