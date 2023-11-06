@@ -2,17 +2,13 @@
 <html>
  <head>
   <title>
-  sudoku à imprimer
+    Sudoku gratuit en ligne - sudoku à imprimer & sudoku difficile gratuit
   </title>
+  <meta name="description" content="Jouez au Sudoku instantanément et gratuitement, sans inscription, et profitez d'un plaisir sudoku illimité. Tableaux de sudoku vierges imprimables et tableaux de sudoku avec cinq niveaux de difficulté.">
+
 <link href="style.css" rel="stylesheet"/>
   
-    <style>
-     .main-layout { display: flex; flex-direction: column; }
-     .upper-layout { display: flex; width: 100%; }
-     .container-a { width: 66%; float: left}  /* Adjust width as necessary */
-     .container-b { width: 34%; float: right}  /* Adjust width as necessary */
-     .container-c { width: 100%; clear: both; margin-top: 20px; } /* Added margin for visual separation */
-    </style>
+ 
     
  </head>
  <header class="page-header">
@@ -30,6 +26,25 @@
    <div class="header-introduction">
     Cliquez sur le bouton bleu à gauche pour imprimer la planche de Sudoku.
    </div>
+   <div class="select"><fieldset>
+    <legend>
+          Start new game (select difficulty)
+         </legend>
+    
+    
+    
+    
+    
+    
+    <select id="difficulty" onchange="changeDifficulty(this.value)">
+      <option value="blank">Blank</option>
+      <option value="easiest">Easiest</option>
+      <option value="easy">Easy</option>
+      <option value="normal">Normal</option>
+      <option value="hard">Hard</option>
+      <option value="hardest">Hardest</option>
+    </select></fieldset></div>
+     </fieldset>
   </div>
  </header>
  <div class="main-layout">
@@ -64,48 +79,24 @@
    </div>
   </div>
   <div class="container-b">
-   <div class="action-container">
-    <fieldset>
-     <legend>
-      Start new game (select difficulty)
-     </legend>
-     <button id="blank" type="button">
-      Blank
-     </button>
-     <button id="easiest" type="button">
-      Easiest
-     </button>
-     <button id="easy" type="button">
-      Easy
-     </button>
-     <button id="normal" type="button">
-      Normal
-     </button>
-     <button id="hard" type="button">
-      Hard
-     </button>
-     <button id="hardest" type="button">
-      Hardest
-     </button>
-    </fieldset>
-    <div class="option">
-        <p>
-        </p>
-        <p>
-         <fieldset>
-          <legend>
-           Action
-          </legend>
-          <button id="clear" type="button">
-           Clear
-          </button>
-          <button id="submit" type="button">
-           Submit Answer
-          </button>
-          <button id="solve" type="button">
-           Solve
-          </button>
-         </fieldset>
+  <div class="option">
+      <p>
+      </p>
+      <p>
+       <fieldset>
+        <legend>
+         Action
+        </legend>
+        <button id="clear" type="button">
+         Clear
+        </button>
+        <button id="submit" type="button">
+         Submit Answer
+        </button>
+        <button id="solve" type="button">
+         Solve
+        </button>
+       </fieldset>
          <script>
           function printSudoku() {
                     window.print();
@@ -149,6 +140,35 @@
   </a>
  </div>
 </footer>
+<div class="bottom-green-block"></div>
+
+<script>
+function changeDifficulty(difficulty) {
+  switch (difficulty) {
+    case 'blank':
+      newBlank();
+      break;
+    case 'easiest':
+      newEasiest();
+      break;
+    case 'easy':
+      newEasy();
+      break;
+    case 'normal':
+      newNormal();
+      break;
+    case 'hard':
+      newHard();
+      break;
+    case 'hardest':
+      newHardest();
+      break;
+    default:
+      console.error('Unknown difficulty:', difficulty);
+  }
+}
+</script>
+</body></html>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
 </script>
 <script src="sudoku.min.js">
