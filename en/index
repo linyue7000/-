@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+    Sudoku gratuit en ligne - sudoku à imprimer & sudoku difficile gratuit
+  </title>
+  <meta name="description" content="Jouez au Sudoku instantanément et gratuitement, sans inscription, et profitez d'un plaisir sudoku illimité. Tableaux de sudoku vierges imprimables et tableaux de sudoku avec cinq niveaux de difficulté.">
+
+<link href="style.css" rel="stylesheet"/>
+  
+ 
+    
+ </head>
+ <header class="page-header">
+  <div class="header-content">
+   <div class="print-button-container">
+    <body>
+     <button class="print-button" onclick="printSudoku()">
+      sudoku à imprimer
+     </button>
+     
+      
+     </div>
+    </body>
+   </div>
+   <div class="header-introduction">
+    Sudoku gratuit en ligne - sudoku à imprimer & sudoku difficile gratuit
+   </div>
+   <div class="select"><fieldset>
+    <legend>
+      sélectionnez la difficulté
+         </legend>
+    
+    
+    
+    
+    
+    
+    <select id="difficulty" onchange="changeDifficulty(this.value)">
+      <option value="blank">blank</option>
+      <option value="easiest"> plus facile</option>
+      <option value="easy">Facile</option>
+      <option value="normal">Normal</option>
+      <option value="hard">dur</option>
+      <option value="hardest">plus dur</option>
+    </select></fieldset></div>
+     </fieldset>
+  </div>
+ </header>
+ <div class="main-layout">
+  <div class=\"upper-layout\"><div class="container-a">
+   <div class="sudoku-options-container">
+    <table class="sudoku-board">
+     <script>
+      for(var i = 0; i < 3; i++){ 
+                    document.write('<tr>'); 
+                    
+                    for(var j = 0; j < 3; j++){
+                        document.write('<td><table class="sudoku-block">');
+                        
+                        for(var k = 0; k < 3; k++){
+                            document.write('<tr>');
+                        
+                            for(var l = 0; l < 3; l++){
+                                var id = (i * 27) + (k * 9) + (j * 3) + l;
+                                document.write('<td class="sudoku-cell"><input id="cell' + id + '" type="number" max="9" min="1" /></td>');
+                            }
+                            
+                            document.write('</tr>');
+                        }
+                        
+                        document.write('</table></td>');
+                    }
+                    
+                    document.write('</tr>');
+                }
+     </script>
+    </table>
+   </div>
+  </div>
+  <div class="container-b">
+  <div class="option">
+      <p>
+      </p>
+      <p>
+       <fieldset>
+        <legend>
+         Action
+        </legend>
+        <button id="clear" type="button">
+          Clair
+        </button>
+        <button id="submit" type="button">
+          Vérifier la réponse
+        </button>
+        <button id="solve" type="button">
+          fournir une réponse
+        </button>
+       </fieldset>
+         <script>
+          function printSudoku() {
+                    window.print();
+                }
+         </script>
+   </div></div>
+  </div>
+ </div>
+</html>
+<div>
+    <div class="container-c">
+    <div class="introduction bottom-container">
+        <h1>Comment imprimer un Sudoku ?</h1>  
+        Sur notre site web, vous pouvez imprimer des grilles de Sudoku vierges ainsi que des grilles de Sudoku de différentes difficultés. Vous pouvez également choisir d'imprimer des grilles de Sudoku déjà résolues. Tout d'abord, sélectionnez le niveau de difficulté désiré, puis cliquez sur le bouton d'impression Sudoku dans le coin supérieur gauche. Les options d'impression apparaîtront. Nous recommandons l'utilisation de Google Chrome. Vous pouvez choisir votre imprimante comme imprimante cible ou enregistrer la grille de Sudoku en format PDF. Dans la section "Plus de paramètres", ajustez les marges et la taille d'échelle pour obtenir la grille de Sudoku de votre choix.
+        
+        <h1>Qu'est-ce que le Sudoku ?</h1>
+        Réponse : Le Sudoku est un jeu de logique, aussi connu comme un jeu de chiffres. Les joueurs doivent remplir une grille de 9x9 de manière à ce que chaque rangée, chaque colonne et chacune des neuf grilles 3x3 (aussi appelées régions) contiennent tous les chiffres de 1 à 9, sans répétition.
+
+        <h1>Pourquoi choisir notre site pour jouer au Sudoku gratuit ?</h1>
+        Réponse : Vous devriez choisir notre site parce que nous proposons diverses options de jeu de Sudoku, incluant le Sudoku en ligne gratuit, le Sudoku imprimable gratuit, et cinq niveaux de difficulté différents (Sudoku ultra-facile, Sudoku facile, Sudoku moyen, Sudoku difficile, et Sudoku ultra-difficile), répondant aux préférences des passionnés de Sudoku de tous niveaux. Nos jeux, facilement accessibles et ne nécessitant aucune inscription, représentent le choix idéal pour les amateurs de Sudoku.
+       
+       <br>
+       <br>
+       <br>
+       <br>
+      </div>
+</div class="container-c"></div>
+</div>
+<footer class="page-footer">
+ Copyright 2023 © sudoku à imprimer. All rights reserved.
+ <div class="language-links">
+  <a href="index_en.html">
+   English
+  </a>
+  |
+  <a href="index_de.html">
+   Deutsch
+  </a>
+  |
+  <a href="index_es.html">
+   Español
+  </a>
+  |
+  <a href="index_hi.html">
+   हिन्दी
+  </a>
+ </div>
+</footer>
+<div class="bottom-green-block"></div>
+
+<script>
+function changeDifficulty(difficulty) {
+  switch (difficulty) {
+    case 'blank':
+      newBlank();
+      break;
+    case 'easiest':
+      newEasiest();
+      break;
+    case 'easy':
+      newEasy();
+      break;
+    case 'normal':
+      newNormal();
+      break;
+    case 'hard':
+      newHard();
+      break;
+    case 'hardest':
+      newHardest();
+      break;
+    default:
+      console.error('Unknown difficulty:', difficulty);
+  }
+}
+</script>
+</body></html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script src="sudoku.min.js">
+</script>
+<script src="main.js">
+</script>
