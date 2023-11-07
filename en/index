@@ -2,11 +2,11 @@
 <html>
  <head>
   <title>
-    Sudoku gratuit en ligne - sudoku à imprimer & sudoku difficile gratuit
+    Free online sudoku - printable sudoku & free difficult sudoku
   </title>
-  <meta name="description" content="Jouez au Sudoku instantanément et gratuitement, sans inscription, et profitez d'un plaisir sudoku illimité. Tableaux de sudoku vierges imprimables et tableaux de sudoku avec cinq niveaux de difficulté.">
+  <meta name="description" content="Play Sudoku instantly and for free, without registration, and enjoy unlimited sudoku fun. Printable blank sudoku boards and sudoku boards with five levels of difficulty.">
 
-<link href="style.css" rel="stylesheet"/>
+  <link href="../style.css" rel="stylesheet"/>
   
  
     
@@ -16,7 +16,7 @@
    <div class="print-button-container">
     <body>
      <button class="print-button" onclick="printSudoku()">
-      sudoku à imprimer
+      Sudoku Printing
      </button>
      
       
@@ -24,11 +24,11 @@
     </body>
    </div>
    <div class="header-introduction">
-    Sudoku gratuit en ligne - sudoku à imprimer & sudoku difficile gratuit
+    Free online sudoku - printable sudoku & free difficult sudoku
    </div>
    <div class="select"><fieldset>
     <legend>
-      sélectionnez la difficulté
+      select difficulty
          </legend>
     
     
@@ -38,11 +38,11 @@
     
     <select id="difficulty" onchange="changeDifficulty(this.value)">
       <option value="blank">blank</option>
-      <option value="easiest"> plus facile</option>
-      <option value="easy">Facile</option>
+      <option value="easiest"> Easiest</option>
+      <option value="easy">Easy</option>
       <option value="normal">Normal</option>
-      <option value="hard">dur</option>
-      <option value="hardest">plus dur</option>
+      <option value="hard">Hard</option>
+      <option value="hardest">Hardest</option>
     </select></fieldset></div>
      </fieldset>
   </div>
@@ -85,13 +85,13 @@
       <p>
        <fieldset>
         <legend>
-         Action
+        Clear
         </legend>
         <button id="clear" type="button">
-          Clair
+          Submit Answer
         </button>
         <button id="submit" type="button">
-          Vérifier la réponse
+          Solve
         </button>
         <button id="solve" type="button">
           fournir une réponse
@@ -109,15 +109,15 @@
 <div>
     <div class="container-c">
     <div class="introduction bottom-container">
-        <h1>Comment imprimer un Sudoku ?</h1>  
-        Sur notre site web, vous pouvez imprimer des grilles de Sudoku vierges ainsi que des grilles de Sudoku de différentes difficultés. Vous pouvez également choisir d'imprimer des grilles de Sudoku déjà résolues. Tout d'abord, sélectionnez le niveau de difficulté désiré, puis cliquez sur le bouton d'impression Sudoku dans le coin supérieur gauche. Les options d'impression apparaîtront. Nous recommandons l'utilisation de Google Chrome. Vous pouvez choisir votre imprimante comme imprimante cible ou enregistrer la grille de Sudoku en format PDF. Dans la section "Plus de paramètres", ajustez les marges et la taille d'échelle pour obtenir la grille de Sudoku de votre choix.
+        <h1>How to Print Sudoku?</h1>  
+        On our website, you can print blank Sudoku grids as well as Sudoku grids of various difficulties. You can also choose to print pre-solved Sudoku grids. First, you can select the desired difficulty level, then click on the Sudoku print button in the top left corner. Printing options will appear. It's recommended to use Google Chrome. You can select your printer as the target printer or save the Sudoku grid as a PDF. In the "More settings," you can customize margin adjustments and scale sizes to get the Sudoku grid you prefer.
         
-        <h1>Qu'est-ce que le Sudoku ?</h1>
-        Réponse : Le Sudoku est un jeu de logique, aussi connu comme un jeu de chiffres. Les joueurs doivent remplir une grille de 9x9 de manière à ce que chaque rangée, chaque colonne et chacune des neuf grilles 3x3 (aussi appelées régions) contiennent tous les chiffres de 1 à 9, sans répétition.
+        <h1>What is Sudoku?</h1>
+        Answer: Sudoku is a logic puzzle game, also known as a number puzzle or a digit puzzle. Players need to fill a 9x9 grid in such a way that every row, every column, and each of the nine 3x3 grids (also known as regions) contains all the digits from 1 to 9, without any repetition.
+        
+        <h1>Why should I choose your website to play Sudoku gratuit (free Sudoku) games?</h1>
+        Answer: You should choose our website because we offer various Sudoku game options, including free online Sudoku, free printable Sudoku, and five different difficulty levels of Sudoku (Ultra-easy Sudoku, Sudoku facile, Sudoku moyen, Difficult Sudoku, Ultra-difficult Sudoku) to cater to the preferences of Sudoku enthusiasts of all levels. Our games are easy to access, require no registration, and are an ideal choice for Sudoku enthusiasts.
 
-        <h1>Pourquoi choisir notre site pour jouer au Sudoku gratuit ?</h1>
-        Réponse : Vous devriez choisir notre site parce que nous proposons diverses options de jeu de Sudoku, incluant le Sudoku en ligne gratuit, le Sudoku imprimable gratuit, et cinq niveaux de difficulté différents (Sudoku ultra-facile, Sudoku facile, Sudoku moyen, Sudoku difficile, et Sudoku ultra-difficile), répondant aux préférences des passionnés de Sudoku de tous niveaux. Nos jeux, facilement accessibles et ne nécessitant aucune inscription, représentent le choix idéal pour les amateurs de Sudoku.
-       
        <br>
        <br>
        <br>
@@ -128,8 +128,8 @@
 <footer class="page-footer">
  Copyright 2023 © sudoku à imprimer. All rights reserved.
  <div class="language-links">
-  <a href="index_en.html">
-   English
+  <a href="index.html">
+   Français
   </a>
   |
   <a href="index_de.html">
@@ -176,7 +176,7 @@ function changeDifficulty(difficulty) {
 </body></html>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
 </script>
-<script src="sudoku.min.js">
+<script src="../sudoku.min.js">
 </script>
-<script src="main.js">
+<script src="../main.js">
 </script>
